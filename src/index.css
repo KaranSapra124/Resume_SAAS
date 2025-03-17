@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary-200: oklch("#1A202C");
-  --color-accent-color: oklch("#4FD1C5");
+  --color-primary-color: #2563EB;
+  --color-accent-color: #fff;
 }
 
 @layer components {

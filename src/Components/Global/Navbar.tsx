@@ -23,7 +23,11 @@ const Navbar = () => {
       link: "/contact",
     },
   ]);
-  return <div>Navbar</div>;
+  return (
+    <div className="bg-primary-color">
+      <h1>Resume Builder</h1>
+    </div>
+  );
 };
 
 export default Navbar;
