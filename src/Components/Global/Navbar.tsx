@@ -24,12 +24,12 @@ const Navbar = () => {
     },
   ]);
   return (
-    <div className="bg-primary-color">
+    <div className="bg-primary-color flex justify-between">
         <h1>HireMeNow</h1>
-      <div>
+      <div className="flex ">
         {links?.map((elem: linkInterface, index: number) => {
           return (
-            <li className="text-accent-color" key={index}>
+            <li className="text-accent-color list-none mx-2 font-semibold" key={index}>
               {elem?.title}
             </li>
           );
