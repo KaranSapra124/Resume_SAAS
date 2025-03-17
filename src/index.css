@@ -5,3 +5,9 @@
   --color-accent-color: #fff;
 }
 
+#root{
+  max-width: none !important;
+  width: 100% !important;
+  padding: 0% !important;
+}
+
