@@ -25,7 +25,16 @@ const Navbar = () => {
   ]);
   return (
     <div className="bg-primary-color">
-      <h1>Resume Builder</h1>
+        <h1>HireMeNow</h1>
+      <div>
+        {links?.map((elem: linkInterface, index: number) => {
+          return (
+            <li className="text-accent-color" key={index}>
+              {elem?.title}
+            </li>
+          );
+        })}
+      </div>
     </div>
   );
 };
