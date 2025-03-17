@@ -5,8 +5,3 @@
   --color-accent-color: #fff;
 }
 
-@layer components {
-  .typography {
-    color: var(--color-accent-200);
-  }
-}

@@ -24,7 +24,7 @@ const Navbar = () => {
     },
   ]);
   return (
-    <div className="bg-primary-color py-2 px-1 flex justify-between">
+    <div className="bg-primary-color rounded py-2 px-1 flex justify-between">
         <h1 className="text-accent-color font-extrabold">HireMeNow</h1>
       <div className="flex ">
         {links?.map((elem: linkInterface, index: number) => {
