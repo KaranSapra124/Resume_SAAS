@@ -1,4 +1,5 @@
 import Container from "../Components/Global/Container";
+import Divider from "../Components/Global/Divider";
 
 const Home = () => {
   return (
@@ -15,10 +16,12 @@ const Home = () => {
           <button className="bg-primary-color p-2 text-accent-color w-fit mx-auto rounded font-bold">
             Create Resume Now
           </button>
+          <Divider className="w-12 h-1 bg-primary-color rounded-full mx-auto" />
           <video
             autoPlay
-            loop className="lg:w-4xl w-full rounded mx-auto"
-            src="https://videocdn.cdnpk.net/videos/b0969803-680e-5ec0-934a-608eac10c3fc/horizontal/previews/clear/small.mp4?token=exp=1742322441~hmac=c88ba33b4cb014ef7bace1d93d1a50012f84a3e27e7fc080bccdde7d7d4ee6de"
+            loop
+            className="lg:w-4xl w-full rounded mx-auto"
+            src="https://videos.pexels.com/video-files/5971459/5971459-sd_960_506_25fps.mp4"
           ></video>
         </div>
       </Container>
