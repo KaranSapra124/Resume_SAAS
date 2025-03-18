@@ -41,6 +41,7 @@ const Navbar = () => {
           })}
         </div>
       </div>
+
       <Outlet />
     </>
   );

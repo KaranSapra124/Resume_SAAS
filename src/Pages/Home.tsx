@@ -1,11 +1,13 @@
-import React from 'react'
+import Container from "../Components/Global/Container";
 
 const Home = () => {
   return (
     <>
-    <h1>Home</h1>
+      <Container>
+        <h1>Home</h1>
+      </Container>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
