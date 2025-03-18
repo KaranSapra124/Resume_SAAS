@@ -31,7 +31,7 @@ const Navbar = () => {
         <div className="flex ">
           {links?.map((elem: linkInterface, index: number) => {
             return (
-              <NavLink
+              <NavLink key={index}
                 to={elem?.link}
                 className="text-primary-color p-1 rounded bg-accent-color list-none mx-2 font-semibold"
               >
@@ -41,7 +41,7 @@ const Navbar = () => {
           })}
         </div>
       </div>
-      <Outlet/>
+      <Outlet />
     </>
   );
 };
