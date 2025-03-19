@@ -1,5 +1,5 @@
 import Container from "../Global/Container";
-import { FaUserEdit, FaFileAlt, FaDownload } from "react-icons/fa";
+import { FaUserEdit, FaFileAlt, FaDownload, FaArrowDown } from "react-icons/fa";
 import Divider from "../Global/Divider";
 
 const HowItWorks = () => {
@@ -29,30 +29,35 @@ const HowItWorks = () => {
   return (
     <>
       <Container className="bg-gray-200/30">
-        <h1 className="text-center lg:text-3xl text-primary-color text-xl">
+        <h1 className="text-center font-extrabold lg:text-3xl text-primary-color text-xl">
           How It Works?
         </h1>
-        <Divider className="h-1 w-12 bg-primary-color rounded-full mx-auto my-2"/>
+        <Divider className="h-1 w-12 bg-primary-color rounded-full mx-auto my-2" />
         <div className=" flex flex-col justify-center  items-center ">
           {howItWorks?.map((elem, index) => {
             return (
-              <div
-                key={index}
-                className={`flex my-4 justify-evenly w-full ${
-                  index % 2 === 0 ? "flex-row" : "flex-row-reverse"
-                }`}
-              >
-                <div className="mx-4 shadow shadow-black my-auto bg-gray-200/80 p-4 rounded-full">
-                  {elem?.icon}
+              <>
+                <div
+                  key={index}
+                  className={`flex my-4 justify-evenly w-full ${
+                    index % 2 === 0 ? "flex-row" : "flex-row-reverse"
+                  }`}
+                >
+                  <div className="mx-4 shadow-md shadow-primary-color my-auto bg-gray-200/80 p-4 rounded-full">
+                    {elem?.icon}
+                  </div>
+                  <div className="max-w-96 rounded bg-primary-color p-2">
+                    <h2 className="lg:text-md md:text-xl text-sm font-semibold  text-accent-color ">
+                      {elem?.title}
+                    </h2>
+                    <Divider className="h-1 w-12 bg-white rounded-full  my-2" />
+                    <p className="text-gray-100">{elem?.description}</p>
+                  </div>
                 </div>
-                <div className="max-w-96 rounded bg-primary-color p-2">
-                  <h2 className="lg:text-md md:text-xl text-sm text-accent-color ">
-                    {elem?.title}
-                  </h2>
-                  <Divider className="h-1 w-12 bg-white rounded-full  my-2"/>
-                  <p className="text-gray-100">{elem?.description}</p>
-                </div>
-              </div>
+                {index !== howItWorks?.length - 1 && (
+                  <FaArrowDown className="text-primary-color my-2 bg-gray-200/30 p-1 text-2xl shadow shadow-black rounded-full" />
+                )}{" "}
+              </>
             );
           })}
         </div>
