@@ -5,9 +5,9 @@ const Home = () => {
   return (
     <>
       <Container>
-        <div className="flex  items-center  lg:flex-row flex-col gap-4 lg:gap-10">
+        <div className="flex  items-center  lg:flex-row flex-col gap-4 lg:gap-12">
           <div className="lg:w-1/2 w-full flex flex-col   gap-2">
-          <div className="bg-primary-color w-fit rounded-full px-2 text-white font-semibold my-2">#HireMeNow</div>
+          <div className="bg-primary-color/85 w-fit rounded-full px-2 text-white font-semibold py-1">#HireMeNow</div>
             <h1 className="font-extrabold text-primary-color text-lg text-left leading-14  lg:text-5xl">
               Build a Stunning Resume in Minutes At Your Fingerprints!
             </h1>
