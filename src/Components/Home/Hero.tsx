@@ -15,7 +15,7 @@ const Hero = () => {
             </h1>
             <Divider className="w-12  h-1 bg-primary-color rounded-full lg:mx-0 mx-auto" />
 
-            <h2 className="text-gray-800 text-left font-semibold  mx-auto lg:text-lg text-xs">
+            <h2 className="text-gray-800 text-left font-extralight  mx-auto lg:text-lg text-xs">
               AI-powered resume builder with customizable templates to make your
               job search easy and effective.
             </h2>
@@ -32,7 +32,7 @@ const Hero = () => {
           ></video>
         </div>
       </Container>
-      <Divider className="h-1 w-12 bg-primary-color rounded-full mx-auto my-4" />
+      {/* <Divider className="h-1 w-12 bg-primary-color rounded-full mx-auto my-4" /> */}
     </>
   );
 };
