@@ -26,14 +26,19 @@ const Navbar = () => {
   ]);
   return (
     <>
-      <div className="bg-primary-color items-center  py-2.5 px-1 flex justify-between">
+      <div className="bg-primary-color items-center  py-3.5 px-5 flex justify-between">
         <h1 className="text-accent-color text-2xl font-extrabold">HireMeNow</h1>
         <div className="flex ">
           {links?.map((elem: linkInterface, index: number) => {
             return (
-              <NavLink key={index}
+              <NavLink
+                key={index}
                 to={elem?.link}
-                className="text-primary-color p-1 rounded bg-accent-color list-none mx-2 font-semibold"
+                className={({ isActive }: { isActive: boolean }) =>
+                  isActive
+                    ? "text-black p-1 rounded bg-accent-color list-none mx-2 font-semibold"
+                    : "text-primary-color p-1 rounded bg-accent-color list-none mx-2 font-semibold"
+                }
               >
                 {elem.title}
               </NavLink>
