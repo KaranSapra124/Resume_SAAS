@@ -1,6 +1,7 @@
 import Container from "../Global/Container";
 import { FaUserEdit, FaFileAlt, FaDownload, FaArrowDown } from "react-icons/fa";
 import Divider from "../Global/Divider";
+import { motion } from "framer-motion";
 
 const HowItWorks = () => {
   const howItWorks = [
@@ -33,14 +34,21 @@ const HowItWorks = () => {
           How It Works?
         </h1>
         <Divider className="h-1 w-12 bg-primary-color rounded-full mx-auto my-2" />
-        <div className=" flex flex-col justify-center  items-center ">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          //   animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, repeat: 0 }}
+          className=" flex flex-col justify-center  items-center "
+        >
           {howItWorks?.map((elem, index) => {
             return (
               <>
-                <div
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
                   key={index}
-                  className={`flex my-4 justify-evenly w-full ${
-                    index % 2 === 0 ? "flex-row" : "flex-row-reverse"
+                  className={`flex max-w-screen-2xl cursor-pointer my-4 justify-evenly w-full ${
+                    index % 2 === 0 ? "flex-row " : "flex-row-reverse "
                   }`}
                 >
                   <div className="mx-4 shadow-md shadow-primary-color my-auto bg-gray-200/80 p-4 rounded-full">
@@ -53,14 +61,14 @@ const HowItWorks = () => {
                     <Divider className="h-1 w-12 bg-white rounded-full  my-2" />
                     <p className="text-gray-100">{elem?.description}</p>
                   </div>
-                </div>
+                </motion.div>
                 {index !== howItWorks?.length - 1 && (
                   <FaArrowDown className="text-primary-color my-2 bg-gray-200/30 p-1 text-2xl shadow shadow-black rounded-full" />
                 )}{" "}
               </>
             );
           })}
-        </div>
+        </motion.div>
       </Container>
     </>
   );
