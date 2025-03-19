@@ -1,13 +1,18 @@
 @import "tailwindcss";
 
+* {
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
 @theme {
-  --color-primary-color: #2563EB;
+  --color-primary-color: #2563eb;
   --color-accent-color: #fff;
 }
 
-#root{
+#root {
   max-width: none !important;
   width: 100% !important;
   padding: 0% !important;
 }
-
