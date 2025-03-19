@@ -8,7 +8,12 @@ function App() {
     {
       element: <Navbar />,
       path: "/",
-      children: [{ element: <Home />, path: "/" }],
+      children: [
+        {
+          element: <Home />,
+          path: "/",
+        },
+      ],
     },
   ]);
 
