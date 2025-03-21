@@ -2,6 +2,11 @@ import Container from "../Global/Container";
 import { motion } from "framer-motion";
 
 const ResumeTemplates = () => {
+  const resumeTemplates = [
+    "https://marketplace.canva.com/EAFszEvkM50/2/0/1131w/canva-simple-professional-cv-resume-36p5VOFVDxY.jpg",
+    "https://marketplace.canva.com/EAFzfwx_Qik/4/0/1131w/canva-blue-simple-professional-cv-resume-T9RPR4DPdiw.jpg",
+    "https://d.novoresume.com/images/doc/skill-based-resume-template.png",
+  ];
   return (
     <Container className="bg-accent-color py-16 text-center">
       <motion.div
