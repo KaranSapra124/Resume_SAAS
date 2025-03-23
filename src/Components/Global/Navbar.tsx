@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
+import Footer from "./Footer";
 
 interface linkInterface {
   title: string;
@@ -48,6 +49,7 @@ const Navbar = () => {
       </div>
 
       <Outlet />
+      <Footer/>
     </>
   );
 };

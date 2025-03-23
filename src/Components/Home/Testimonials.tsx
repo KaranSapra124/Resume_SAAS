@@ -1,5 +1,6 @@
 import Container from "../Global/Container";
 import { motion } from "framer-motion";
+import Divider from "../Global/Divider";
 const Testimonials = () => {
   const testimonials = [
     {
@@ -33,21 +34,55 @@ const Testimonials = () => {
   ];
 
   return (
-    <Container className="bg-primary-color">
+    <Container className="bg-accent-color">
       <motion.div>
-        <h1>What Our Clients Say ?</h1>
-        <div>
+        <h1 className="lg:text-3xl text-xl text-primary-color font-bold text-center ">
+          What Our Clients Say ? 📢
+        </h1>
+        <p className="text-xs text-gray-800 text-center my-1">
+          Our users love how easy and professional our resume builder is! With
+          ATS-friendly templates, it helps them stand out and land their dream
+          jobs. 🚀
+        </p>
+        <Divider className="h-1 w-12 rounded-full bg-primary-color mx-auto my-2" />
+        <div className="flex justify-between">
           {testimonials?.map((testimonial, index) => {
             return (
-              <motion.div>
-                <div>
-                  <img src={testimonial?.image} alt="" />
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{
+                  duration: index + 1,
+                  delay: index + 1,
+                }}
+                // key={index}
+                className="bg-accent-color shadow-md max-w-64 p-2 rounded flex flex-col "
+              >
+                <div className="flex items-center justify-between">
+                  <img
+                    className="w-16 shadow shadow-black  rounded-full"
+                    src={testimonial?.image}
+                    alt=""
+                  />
                   <div>
-                    <h2>{testimonial?.name}</h2>
-                    <p>{testimonial?.designation}</p>
+                    <h2 className="text-sm font-semibold">
+                      {testimonial?.name}
+                    </h2>
+                    <p className="text-xs text-gray-500">
+                      {testimonial?.designation}
+                    </p>
                   </div>
                 </div>
-                <p>{testimonial?.feedback}</p>
+                <Divider className="w-12 my-2 h-0.5 bg-primary-color " />
+                <p className="text-xs text-gray-600">
+                  <span className="text-lg text-primary-color font-extrabold">
+                    "
+                  </span>
+                  {testimonial?.feedback}
+                  <span className="text-lg text-primary-color font-extrabold">
+                    "
+                  </span>
+                </p>
               </motion.div>
             );
           })}
