@@ -4,6 +4,7 @@ import Hero from "../Components/Home/Hero";
 import HowItWorks from "../Components/Home/HowItWorks";
 import PricingSection from "../Components/Home/PricingSection";
 import ResumeTemplates from "../Components/Home/ResumeTemplates";
+import Testimonials from "../Components/Home/Testimonials";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Features />
       <ResumeTemplates />
       <PricingSection />
+      <Testimonials />
     </>
   );
 };
