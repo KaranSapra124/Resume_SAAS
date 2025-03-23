@@ -37,8 +37,8 @@ const Navbar = () => {
                 to={elem?.link}
                 className={({ isActive }: { isActive: boolean }) =>
                   isActive
-                    ? "text-black p-1 rounded bg-accent-color list-none mx-2 font-semibold"
-                    : "text-primary-color p-1 rounded bg-accent-color list-none mx-2 font-semibold"
+                    ? "text-accent-color underline p-1 rounded  list-none mx-2 font-semibold"
+                    : "text-accent-color p-1 rounded  list-none mx-2 font-light"
                 }
               >
                 {elem.title}
