@@ -72,6 +72,9 @@ const Features = () => {
             assistance. Choose from multiple templates, get smart job
             recommendations, and apply with a single click!
           </p>
+
+          <Divider className="my-2 h-1 rounded-full w-12 bg-primary-color " />
+
           <div className="grid grid-cols-2 gap-1">
             {features?.map((elem, index) => {
               return (
