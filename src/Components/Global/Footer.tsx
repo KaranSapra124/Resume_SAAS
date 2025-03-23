@@ -1,16 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Container from "./Container";
-// import Divider from "./Divider";
 
 const Footer: React.FC = () => {
   return (
     <>
       <Container className="bg-primary-color">
-        <footer className="  text-white ">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-            {/* Left Section */}
+        <footer className="text-white">
+          <div className="mx-auto grid grid-cols-1 md:grid-cols-4 gap-5">
+            {/* Home Section */}
             <div>
-              <h2 className="text-2xl font-bold">HireMeNow</h2>
+              <h2 className="text-2xl font-bold">Home</h2>
               <p className="mt-2 text-gray-300">
                 HireMeNow is designed to simplify your job search with
                 professional resume templates and seamless customization. Build
@@ -19,37 +19,45 @@ const Footer: React.FC = () => {
               </p>
             </div>
 
-            {/* Product Section */}
+            {/* Features Section */}
             <div>
-              <h3 className="text-lg font-semibold">Product</h3>
+              <h3 className="text-lg font-semibold">Features</h3>
               <ul className="mt-2 space-y-2 text-gray-300">
-                <li className="hover:text-white cursor-pointer">Overview</li>
-                <li className="hover:text-white cursor-pointer">Pricing</li>
                 <li className="hover:text-white cursor-pointer">
-                  Customer stories
+                  <Link to="/">Overview</Link>
+                </li>
+                <li className="hover:text-white cursor-pointer">
+                  <Link to="/features">Features</Link>
+                </li>
+                <li className="hover:text-white cursor-pointer">
+                  <Link to="/pricing">Pricing</Link>
                 </li>
               </ul>
             </div>
 
-            {/* Resources Section */}
+            {/* Pricing Section */}
             <div>
-              <h3 className="text-lg font-semibold">Resources</h3>
+              <h3 className="text-lg font-semibold">Pricing</h3>
               <ul className="mt-2 space-y-2 text-gray-300">
-                <li className="hover:text-white cursor-pointer">Blog</li>
                 <li className="hover:text-white cursor-pointer">
-                  Guides & tutorials
+                  <Link to="/pricing">Pricing Plans</Link>
                 </li>
-                <li className="hover:text-white cursor-pointer">Help center</li>
+                <li className="hover:text-white cursor-pointer">
+                  <Link to="/contact">Contact Sales</Link>
+                </li>
               </ul>
             </div>
 
-            {/* Company Section */}
+            {/* Contact Section */}
             <div>
-              <h3 className="text-lg font-semibold">Company</h3>
+              <h3 className="text-lg font-semibold">Contact</h3>
               <ul className="mt-2 space-y-2 text-gray-300">
-                <li className="hover:text-white cursor-pointer">About us</li>
-                <li className="hover:text-white cursor-pointer">Careers</li>
-                <li className="hover:text-white cursor-pointer">Media kit</li>
+                <li className="hover:text-white cursor-pointer">
+                  <Link to="/contact">Get in Touch</Link>
+                </li>
+                <li className="hover:text-white cursor-pointer">
+                  <Link to="/contact">Support</Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -66,33 +74,16 @@ const Footer: React.FC = () => {
 
             {/* Middle */}
             <div className="text-gray-300 text-sm mt-4 md:mt-0">
-              &copy; 2021 Whitespace LLC.
+              &copy; 2025 HireMeNow.
             </div>
 
             {/* Right - Social Icons */}
             <div className="flex space-x-4 mt-4 md:mt-0">
-              <a href="#" className="text-white hover:text-gray-300">
-                🌐
-              </a>
-              <a href="#" className="text-white hover:text-gray-300">
-                🐦
-              </a>
-              <a href="#" className="text-white hover:text-gray-300">
-                🔗
-              </a>
+              <a href="#" className="text-white hover:text-gray-300">🌐</a>
+              <a href="#" className="text-white hover:text-gray-300">🐦</a>
+              <a href="#" className="text-white hover:text-gray-300">🔗</a>
             </div>
           </div>
-
-          {/* Call to Action Section
-      <div className="mt-10 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
-        <div className="text-center md:text-left">
-          <h3 className="text-lg font-semibold">Try It Today</h3>
-          <p className="text-gray-300 mt-2">Get started for free. Add your whole team as your needs grow.</p>
-        </div>
-        <button className="bg-blue-500 text-white px-6 py-3 rounded-lg mt-4 md:mt-0 hover:bg-blue-600 transition">
-          Start today →
-        </button>
-      </div> */}
         </footer>
       </Container>
     </>
