@@ -22,6 +22,18 @@ const ResumeTemplates = () => {
           you stand out. Customize them to match your style and land your dream
           job!
         </p>
+        <div className="flex justify-evenly">
+          {resumeTemplates?.map((elem, index) => {
+            return (
+              <div key={index} className="relative group">
+                <div className="absolute rounded transition-all  hidden group-hover:block h-full bg-black/60 w-full ">
+                  <button className="text-white border border-white rounded p-1 my-32 cursor-pointer hover:bg-white hover:text-black transition-all">Click</button>
+                </div>
+                <img className=" w-52 rounded" src={elem} alt="" />
+              </div>
+            );
+          })}
+        </div>
       </motion.div>
     </Container>
   );
