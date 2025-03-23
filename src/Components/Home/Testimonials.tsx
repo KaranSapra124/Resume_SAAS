@@ -1,4 +1,5 @@
-
+import Container from "../Global/Container";
+import { motion } from "framer-motion";
 const Testimonials = () => {
   const testimonials = [
     {
@@ -31,7 +32,29 @@ const Testimonials = () => {
     },
   ];
 
-  return <div>Testimonials</div>;
+  return (
+    <Container className="bg-primary-color">
+      <motion.div>
+        <h1>What Our Clients Say ?</h1>
+        <div>
+          {testimonials?.map((testimonial, index) => {
+            return (
+              <motion.div>
+                <div>
+                  <img src={testimonial?.image} alt="" />
+                  <div>
+                    <h2>{testimonial?.name}</h2>
+                    <p>{testimonial?.designation}</p>
+                  </div>
+                </div>
+                <p>{testimonial?.feedback}</p>
+              </motion.div>
+            );
+          })}
+        </div>
+      </motion.div>
+    </Container>
+  );
 };
 
 export default Testimonials;
