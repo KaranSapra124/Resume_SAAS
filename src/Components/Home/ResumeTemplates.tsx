@@ -1,5 +1,6 @@
 import Container from "../Global/Container";
 import { motion } from "framer-motion";
+import Divider from "../Global/Divider";
 
 const ResumeTemplates = () => {
   const resumeTemplates = [
@@ -17,17 +18,20 @@ const ResumeTemplates = () => {
         <h1 className="lg:text-3xl text-xl font-bold text-primary-color">
           🚀 Professional Resume Templates
         </h1>
-        <p className="lg:text-sm text-xs text-gray-800 my-2">
+        <p className="lg:text-sm text-xs text-gray-800 py-1.5">
           Choose from a variety of expertly designed resume templates that help
           you stand out. Customize them to match your style and land your dream
           job!
         </p>
-        <div className="flex justify-evenly">
+        <Divider className="my-1.5 h-1 rounded-full w-12 bg-primary-color mx-auto" />
+        <div className="flex py-2 justify-evenly">
           {resumeTemplates?.map((elem, index) => {
             return (
               <div key={index} className="relative group">
-                <div className="absolute rounded transition-all  hidden group-hover:block h-full bg-black/60 w-full ">
-                  <button className="text-white border border-white rounded p-1 my-32 cursor-pointer hover:bg-white hover:text-black transition-all">Click</button>
+                <div className="absolute rounded transition-all  hidden group-hover:block h-full bg-gray-800/50 w-full ">
+                  <button className="text-white border-2 w-20 font-semibold bg-black/30 border-white rounded p-1 my-32 cursor-pointer hover:bg-white hover:text-black transition-all">
+                    Click
+                  </button>
                 </div>
                 <img className=" w-52 rounded" src={elem} alt="" />
               </div>
