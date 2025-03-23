@@ -56,7 +56,7 @@ const PricingSection = () => {
             return (
               <div
                 key={index}
-                className={`p-4 w-64 shadow bg-gray-200 shadow-black border rounded ${
+                className={`p-4 w-64 shadow bg-gradient-to-tr from-gray-300/20 to-black/10 shadow-black border rounded ${
                   plan.highlight ? "border-gray-200" : "border-gray-300 "
                 } `}
               >
@@ -73,7 +73,9 @@ const PricingSection = () => {
                 </h2>
                 <p className="text-2xl font-semibold ">
                   ₹{plan.price}
-                  <span className="text-xs text-black font-semibold">/month</span>
+                  <span className="text-xs text-black font-semibold">
+                    /month
+                  </span>
                 </p>
                 <ul className="flex flex-col gap-2 my-2">
                   {plan.features.map((feature, i) => (
@@ -83,7 +85,7 @@ const PricingSection = () => {
                     </li>
                   ))}
                 </ul>
-                <button className="mt-4 bg-primary text-white px-4 py-2 rounded">
+                <button className=" bg-primary-color  cursor-pointer hover:scale-105 transition-all text-white text-xs mt-auto px-4 py-2 rounded">
                   {plan.price === 0 ? "Get Started" : "Upgrade Now"}
                 </button>
               </div>
