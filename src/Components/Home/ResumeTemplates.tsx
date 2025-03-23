@@ -27,9 +27,9 @@ const ResumeTemplates = () => {
         <div className="flex py-2 justify-evenly">
           {resumeTemplates?.map((elem, index) => {
             return (
-              <div key={index} className="relative group">
+              <div key={index} className="relative border border-gray-200 rounded group">
                 <div className="absolute rounded transition-all  hidden group-hover:block h-full bg-gray-800/50 w-full ">
-                  <button className="text-white border-2 w-20 font-semibold bg-black/30 border-white rounded p-1 my-32 cursor-pointer hover:bg-white hover:text-black transition-all">
+                  <button className="text-white  border-2 w-20 font-semibold bg-black/30 border-white rounded p-1 my-32 cursor-pointer hover:bg-white hover:text-primary-color  transition-all">
                     Click
                   </button>
                 </div>
