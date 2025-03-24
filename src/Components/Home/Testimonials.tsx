@@ -52,11 +52,11 @@ const Testimonials = () => {
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{
-                  duration: index + 1,
+                  duration: index + 0.5,
                   delay: index + 1,
                 }}
                 // key={index}
-                className="bg-accent-color shadow-md max-w-64 p-2 rounded flex flex-col "
+                className="bg-accent-color  shadow-md shadow-black max-w-64 p-2 rounded flex flex-col "
               >
                 <div className="flex items-center justify-between">
                   <img
