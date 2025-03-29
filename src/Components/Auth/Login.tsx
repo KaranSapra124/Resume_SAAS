@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import Container from "../Global/Container";
 // import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -79,10 +79,12 @@ const CustomLoginButton = () => {
         `${import.meta.env.VITE_BACKEND_URL}/auth/google`,
         { code: tokenResponse?.code },
         {
+          withCredentials:true,
           headers: {
             "Content-Type": "application/json",
           },
-        }
+        },
+        
       );
       alert(data?.message);
     },
