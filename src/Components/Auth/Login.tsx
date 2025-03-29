@@ -79,12 +79,11 @@ const CustomLoginButton = () => {
         `${import.meta.env.VITE_BACKEND_URL}/auth/google`,
         { code: tokenResponse?.code },
         {
-          withCredentials:true,
+          withCredentials: true,
           headers: {
             "Content-Type": "application/json",
           },
-        },
-        
+        }
       );
       alert(data?.message);
     },

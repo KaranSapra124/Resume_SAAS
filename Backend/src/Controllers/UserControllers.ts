@@ -44,7 +44,7 @@ const authGoogleLogin = async (
     res.cookie("userToken", token, {
       expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000), // 7 din baad expire,
       httpOnly: true,
-      secure:true
+      secure: true,
     });
     res.status(201).send({
       message: "Logged In Successfully!",
