@@ -4,6 +4,7 @@ import Navbar from "./Components/Global/Navbar";
 import Home from "./Pages/Home";
 import Login from "./Components/Auth/Login";
 import { GoogleOAuthProvider } from "@react-oauth/google";
+import Dashboard from "./Components/UserPanel/Dashboard";
 
 function App() {
   const appRoutes = createBrowserRouter([
@@ -21,6 +22,10 @@ function App() {
         },
       ],
     },
+    {
+      element:<Dashboard/>,
+      path:"/user"
+    }
   ]);
 
   return (
