@@ -1,26 +1,48 @@
+import React, { useState } from "react";
+import Modal from "../../Global/Modal";
+
 const templates = [
-    {
-      id: 1,
-      name: "Modern",
-      image:
-        "https://marketplace.canva.com/EAFszEvkM50/2/0/1131w/canva-simple-professional-cv-resume-36p5VOFVDxY.jpg",
-    },
-    {
-      id: 2,
-      name: "Classic",
-      image:
-        "https://marketplace.canva.com/EAFzfwx_Qik/4/0/1131w/canva-blue-simple-professional-cv-resume-T9RPR4DPdiw.jpg",
-    },
-    {
-      id: 3,
-      name: "Creative",
-      image:
-        "https://d.novoresume.com/images/doc/skill-based-resume-template.png",
-    },
-  ];
-  
-  const ResumeTemplates = () => {
-    return (
+  {
+    id: 1,
+    name: "Modern",
+    image:
+      "https://marketplace.canva.com/EAFszEvkM50/2/0/1131w/canva-simple-professional-cv-resume-36p5VOFVDxY.jpg",
+  },
+  {
+    id: 2,
+    name: "Classic",
+    image:
+      "https://marketplace.canva.com/EAFzfwx_Qik/4/0/1131w/canva-blue-simple-professional-cv-resume-T9RPR4DPdiw.jpg",
+  },
+  {
+    id: 3,
+    name: "Creative",
+    image:
+      "https://d.novoresume.com/images/doc/skill-based-resume-template.png",
+  },
+];
+
+interface ModalProps<T> {
+  open: Boolean;
+  setOpen: (value: T) => void;
+  content: React.ReactNode;
+}
+
+const ResumeTemplates = () => {
+  const [open, setOpen] = useState<Boolean>(false);
+  return (
+    <>
+      {open && (
+        <ResumeModal
+          content={
+            <>
+              <h1>Hello</h1>
+            </>
+          }
+          open={open}
+          setOpen={() => setOpen(!open)}
+        />
+      )}
       <div className="p-8 bg-gray-100 min-h-screen">
         <h1 className="text-3xl font-bold text-center text-[#2563eb] mb-6">
           Choose Your Resume Template
@@ -40,7 +62,10 @@ const templates = [
                 <h2 className="text-xl font-semibold text-white mb-2">
                   {template.name}
                 </h2>
-                <button className="bg-[#2563eb] cursor-pointer text-white py-2 px-4 rounded-md hover:bg-[#1d4ed8]">
+                <button
+                  onClick={() => setOpen(true)}
+                  className="bg-[#2563eb] cursor-pointer text-white py-2 px-4 rounded-md hover:bg-[#1d4ed8]"
+                >
                   Select
                 </button>
               </div>
@@ -48,7 +73,16 @@ const templates = [
           ))}
         </div>
       </div>
-    );
-  };
-  
-  export default ResumeTemplates;
+    </>
+  );
+};
+
+const ResumeModal: React.FC<ModalProps<Boolean>> = ({
+  open,
+  setOpen,
+  content,
+}) => {
+  return <Modal content={content} setIsOpen={setOpen}></Modal>;
+};
+
+export default ResumeTemplates;
