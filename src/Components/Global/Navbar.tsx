@@ -24,6 +24,10 @@ const Navbar = () => {
       title: "Contact",
       link: "/contact",
     },
+    {
+      title: "Login",
+      link: "/login",
+    },
   ]);
   return (
     <>
@@ -49,7 +53,7 @@ const Navbar = () => {
       </div>
 
       <Outlet />
-      <Footer/>
+      <Footer />
     </>
   );
 };
