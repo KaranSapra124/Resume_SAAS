@@ -18,7 +18,7 @@ const User = new Schema<userInterface>({
   picture: { type: String },
   plan: { type: Object, default: null },
   applications: { type: [], default: [] },
-  resumes:{ type: [], default: [] },
+  resumes: { type: [], default: [] },
 });
 
 export default model("User", User);

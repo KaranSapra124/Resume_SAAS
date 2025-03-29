@@ -29,7 +29,7 @@ function App() {
       children: [
         {
           element: <ResumeTemplates />,
-          path:"/user/resume-templates"
+          path: "/user/resume-templates",
         },
       ],
     },
