@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import axios from "axios";
-import { DecodeJwt } from "../Utils/JwtFn";
+import { DecodeJwt, generateToken } from "../Utils/JwtFn";
 import User from "../Models/User";
 interface RequestInterface extends Request {
   body: {
@@ -40,6 +40,12 @@ const authGoogleLogin = async (
     const profile = DecodeJwt(data?.id_token);
     const { name, email, picture } = profile as GoogleProfile;
     const newUser = await User.create({ name, email, picture });
+    const token = generateToken(newUser._id.toString());
+    res.cookie("userToken", token, {
+      expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000), // 7 din baad expire,
+      httpOnly: true,
+      secure:true
+    });
     res.status(201).send({
       message: "Logged In Successfully!",
       userData: { access_token: data.access_token, profile: newUser },
