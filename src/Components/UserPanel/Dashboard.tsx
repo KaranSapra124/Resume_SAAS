@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
   const [name] = useState<String | null>("Karan");
@@ -15,7 +15,7 @@ const Dashboard = () => {
             </Link>
           </li>
           <li className="mb-2">
-            <Link to="/resume-templates" className="hover:underline">
+            <Link to="/user/resume-templates" className="hover:underline">
               Resume Templates
             </Link>
           </li>
@@ -29,10 +29,7 @@ const Dashboard = () => {
 
       {/* Main Content */}
       <div className="flex-1 p-10">
-        <h1 className="text-3xl font-bold text-gray-800">Welcome, {name}!</h1>
-        <p className="text-gray-600 mt-2">
-          Manage your resumes and settings from here.
-        </p>
+       <Outlet/>
       </div>
     </div>
   );
